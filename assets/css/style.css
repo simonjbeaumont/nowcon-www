@@ -92,8 +92,8 @@ nav a:focus { color: #fff; }
 
 .coming-soon .logo a {
 	display: inline-block;
-    width: 600px;
-    height: 230px;
+    width: 300px;
+    height: 115px;
 	background: url(../img/ya.png) center center no-repeat;
 	text-indent: -99999px;
 }
