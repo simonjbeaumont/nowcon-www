@@ -239,6 +239,7 @@ nav a:focus { color: #fff; }
     height: 50px;
 }
 
+.contact a.btn,
 .contact form button {
     width: 230px;
     height: 52px;

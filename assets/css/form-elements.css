@@ -31,6 +31,7 @@ input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder { color
 input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #888; }
 
 
+.contact a.btn,
 .contact button, 
 .contact-form button {
     margin: 0;
@@ -56,6 +57,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
     transition: all .3s;
 }
 
+.contact a.btn:hover,
 .contact button:hover, 
 .contact-form button:hover {
     background: #eee;
@@ -67,6 +69,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
     transition: all .3s;
 }
 
+.contact a.btn:active,
 .contact button:active, 
 .contact-form button:active {
     background: #eee;
