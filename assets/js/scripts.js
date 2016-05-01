@@ -49,23 +49,17 @@ jQuery(document).ready(function() {
     /*
         Countdown initializer
     */
-    function first_thursday_of_month(d) {
-        var d_ = new Date(d)
-        d_.setDate(1)
-        while (d_.getDay() !== 4) {
-            d_.setDate(d_.getDate() + 1)
-        }
-        return d_
-    }
     var now = new Date()
-    now.setHours(19)
-    now.setMinutes(30)
-    now.setSeconds(0)
-    var gt = first_thursday_of_month(now)
-    if (gt < now) {
-        gt = first_thursday_of_month(now.setMonth(now.getMonth() + 1))
+    var d = new Date()
+    d.setMonth(6)
+    d.setDate(25)
+    d.setHours(10)
+    d.setMinutes(30)
+    d.setSeconds(0)
+    if (d < now) {
+      d = now
     }
-    $('.timer').countdown(gt, function(event) {
+    $('.timer').countdown(d, function(event) {
         $(this).find('.days').text(event.offset.totalDays);
         $(this).find('.hours').text(event.offset.hours);
         $(this).find('.minutes').text(event.offset.minutes);
@@ -122,45 +116,13 @@ jQuery(document).ready(function() {
     /*
 	    Google maps
 	*/
-    var position = new google.maps.LatLng(52.190505, 0.137026);
-    $('.contact-address .map').gmap({'center': position, 'zoom': 15, 'disableDefaultUI':true, 'callback': function() {
+    var position = new google.maps.LatLng( 52.2005843,0.1570597);
+    $('.contact-address .map').gmap({'center': position, 'zoom': 17, 'disableDefaultUI':true, 'callback': function() {
             var self = this;
             self.addMarker({'position': this.get('map').getCenter() });	
         }
     });
 
-    /*
-        Subscription form
-    */
-    $('.success-message').hide();
-    $('.error-message').hide();
-
-    $('.subscribe form').submit(function(e) {
-    	e.preventDefault();
-        var postdata = $('.subscribe form').serialize();
-        $.ajax({
-            type: 'POST',
-            url: 'assets/subscribe.php',
-            data: postdata,
-            dataType: 'json',
-            success: function(json) {
-                if(json.valid == 0) {
-                    $('.success-message').hide();
-                    $('.error-message').hide();
-                    $('.error-message').html(json.message);
-                    $('.error-message').fadeIn();
-                }
-                else {
-                    $('.error-message').hide();
-                    $('.success-message').hide();
-                    $('.subscribe form').hide();
-                    $('.success-message').html(json.message);
-                    $('.success-message').fadeIn();
-                }
-            }
-        });
-    });
-    
     /*
 	    Contact form
 	*/
@@ -173,7 +135,7 @@ jQuery(document).ready(function() {
 	    var postdata = $('.contact-form form').serialize();
 	    $.ajax({
 	        type: 'POST',
-	        url: 'assets/contact.php',
+	        url: 'https://getsimpleform.com/messages?form_api_token=392f9d29aab692d3dedddf1ab122e987',
 	        data: postdata,
 	        dataType: 'json',
 	        success: function(json) {
@@ -193,6 +155,9 @@ jQuery(document).ready(function() {
 	            }
 	        }
 	    });
+	                $('.contact-form form').fadeOut('fast', function() {
+	                    $('.contact-form').append('<p>Thanks for contacting us! We will get back to you very soon.</p>');
+	                });
 	});
 
     

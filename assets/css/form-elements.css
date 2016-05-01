@@ -31,7 +31,7 @@ input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder { color
 input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #888; }
 
 
-.subscribe button, 
+.contact button, 
 .contact-form button {
     margin: 0;
     padding: 0;
@@ -56,7 +56,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
     transition: all .3s;
 }
 
-.subscribe button:hover, 
+.contact button:hover, 
 .contact-form button:hover {
     background: #eee;
     color: #888;
@@ -67,7 +67,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
     transition: all .3s;
 }
 
-.subscribe button:active, 
+.contact button:active, 
 .contact-form button:active {
     background: #eee;
     color: #888;

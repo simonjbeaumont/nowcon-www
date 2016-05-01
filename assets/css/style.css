@@ -94,17 +94,17 @@ nav a:focus { color: #fff; }
 	display: inline-block;
     width: 300px;
     height: 115px;
-	background: url(../img/ya.png) center center no-repeat;
+	background: url(../img/c3.png) center center no-repeat;
 	text-indent: -99999px;
 }
 
 .coming-soon .logo a:before {
-	content: url(../img/ya-hover.png);
+	content: url(../img/c3.png);
 	width: 0;
 	height: 0;
 	visibility: hidden;
 }
-.coming-soon .logo a:hover { background-image: url(../img/ya-hover.png); }
+.coming-soon .logo a:hover { background-image: url(../img/c3.png); }
 
 .coming-soon h2 {
     font-size: 46px;
@@ -230,18 +230,19 @@ nav a:focus { color: #fff; }
     line-height: 36px;
 }
 
-.subscribe form {
-    margin-top: 40px;
+.contact form {
+    margin-top: 20px;
 }
 
-.subscribe form input {
+.contact form input {
     width: 340px;
     height: 50px;
 }
 
-.subscribe form button {
-    width: 130px;
+.contact form button {
+    width: 230px;
     height: 52px;
+    margin-bottom:40px;
 }
 
 .success-message, .error-message {
