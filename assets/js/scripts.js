@@ -50,12 +50,7 @@ jQuery(document).ready(function() {
         Countdown initializer
     */
     var now = new Date()
-    var d = new Date()
-    d.setMonth(6)
-    d.setDate(25)
-    d.setHours(10)
-    d.setMinutes(30)
-    d.setSeconds(0)
+    var d = new Date("June 25, 2016 10:30:00");
     if (d < now) {
       d = now
     }
